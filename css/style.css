@@ -1,0 +1,13 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 19.5px;
+  color: #ae7c78;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.visually-hidden {
+  display: none;
+}
