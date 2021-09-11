@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,22 +11,25 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
+  
 </head>
 <body>
   <header class="header">
     <div class="container">
       <nav class="nav-menu">
         <!-- меню -->
+        <a href="#" class="link-item logo-link"><img class="logo" src="img/logo.svg" alt="logo - Botanica"></a>
         <ul class="menu-list">
-          <li class="list-item"><a href="#" class="link-item">Каталог</a></li>
-          <li class="list-item"><a href="#" class="link-item">Доставка и оплата</a></li>
-          <li class="list-item"><a href="#" class="link-item">Отзывы</a></li>
-          <li class="list-item"><a href="#" class="link-item"><img class="logo" src="img/logo.svg" alt="logo - Botanica"></a>
+          <li class="list-item"><a href="#catalog" class="link-item">Каталог</a></li>
+          
+          <li class="list-item"><a href="#order" class="link-item">Доставка и оплата</a></li>
+          <li class="list-item"><a href="#feedback" class="link-item link-item-3">Отзывы</a></li>
+          
+          <li class="list-item"><a href="#promo" class="link-item link-item-4">Спецпредложения</a>
           </li>
-          <li class="list-item"><a href="#" class="link-item">Спецпредложения</a>
-          </li>
-          <li class="list-item"><a href="#" class="link-item">Контакты</a>
+          <li class="list-item"><a href="#contacts" class="link-item">Контакты</a>
           </li>
           <li class="list-item"><a href="#" class="link-item">Корзина</a>
           </li>
@@ -37,246 +40,289 @@
   <main>
     <section class="title-section">
       <!-- шапка-название сайта -->
-      <div class="container">
+      <div class="container for-flex">
         <div class="landing-info">
-          <h1 class="landing-title">Авторские букеты <span>в Петербурге</span></h1>
-          <p>Оригинальные свежие букеты <br>с доставкой по всему городу</p>
-          <a href="#">Смотреть каталог</a>
+          <h1 class="landing-title">Авторские букеты <span class="cursiv">в Петербурге</span></h1>
+          <p class="landing-text">Оригинальные свежие букеты <br>с доставкой по всему городу</p>
+          <a href="#catalog" class="button button-link">Смотреть каталог</a>
         </div>
-        <img src="img/anna-tukhfatullina-food-photographer-stylist-bq6Gd7pQznU-unsplash 1.jpg" alt="тюльпаны нежно-розового цвета">
-        <img src="img/taisiia-shestopal-JZDyFwGAEqY-unsplash 1.jpg"
+        <img  class="landing-photo landing-photo-1"  src="img/anna-tukhfatullina-food-photographer-stylist-bq6Gd7pQznU-unsplash 1.jpg" alt="тюльпаны нежно-розового цвета">
+        <img class="landing-photo landing-photo-2"  src="img/taisiia-shestopal-JZDyFwGAEqY-unsplash 1.jpg"
           alt="розово-белые цветы">
       </div>
     </section>
-    <section class="benefit-section"> 
+    <section class="section benefit-section"> 
       <!-- преимущества -->
       <div class="container">
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="benefit-list">
-          <li class="benefit-item">
-            <img class="benefit-icon" src="img/shipping.svg" alt="Машинка-иконка">
+          <li class="benefit-item benefit-item-1">
             <h4 class="benefit-title">Быстрая доставка</h4>
-            <p>Можем собрать букет и передать его в доставку всего за час.</p>
+            <p class="benefit-text">Можем собрать букет и передать его в доставку всего за час.</p>
           </li>
-          <li class="benefit-item">
-            <img class="benefit-icon" src="img/bouquet.svg" alt="Букет-иконка">
+          <li class="benefit-item benefit-item-2">
             <h4 class="benefit-title">Всегда свежие цветы</h4>
-            <p>Тщательно следим за состоянием цветов, а опытные флористы отбирают для букетов каждый цветок.</p>
+            <p class="benefit-text" >Тщательно следим за состоянием цветов, а опытные флористы отбирают для букетов каждый цветок.</p>
           </li>
-          <li class="benefit-item">
-            <img class="benefit-icon" src="img/foto.svg" alt="Фото-иконка">
+          <li class="benefit-item benefit-item-3"> 
             <h4 class="benefit-title">Отправляем фото цветов</h4>
-            <p>Перед доставкой сделаем фотографию букета и отправим вам.</p>
+            <p class="benefit-text">Перед доставкой сделаем фотографию букета и отправим вам.</p>
           </li>
          </ul>
       </div>
     </section>
-    <section class="popular-section">
+    <section class="section popular-section">
       <!-- Слайдер  -->
       <div class="container">
-        <h2 class="section-title">Популярные букеты</h2>
+        <h2 class="section-title section-title-popular">Популярные букеты</h2>
         <!-- Slider main container -->
-        <div class="swiper-container">
+        <div class="swiper-container popular-slider">
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
               <div class="swiper-slide-wrapper">
-                  <h4>Букет «Нежность»</h4>
-                  <p>Элегантный букет, который станет отличным подарком на день рождения или юбилей.</p>
-                  <p>30 × 40 см</p>
-                  <strong>3600 руб.</strong>
-                  <button>Заказать</button>
+                  <h4 class="popular-title">Букет «Нежность»</h4>
+                  <p class="popular-text">Элегантный букет, который станет отличным подарком на день рождения или юбилей.</p>
+                  <p class="popular-size">30 × 40 см</p>
+                  <p class="popular-price">3600 руб.</p>
+                  <button class="button button-order">Заказать</button>
               </div>
-              <img class="svaper-image" src="img/imgbin_flower-bouquet-cut-flowers-floral-design-garden-roses-png 1.jpg"   alt="Букет из бледно-розовых роз">
+              <img class="svaper-image" src="img/imgbin_flower-bouquet-cut-flowers-floral-design-garden-roses-png 1.png"   alt="Букет из бледно-розовых роз">
             </div>
             <div class="swiper-slide">
               <div class="swiper-slide-wrapper">
-                <h4>Букет «Нежность»</h4>
+                <h4 class="popular-title">Букет «Нежность»</h4>
                 <p>Элегантный букет, который станет отличным подарком на день рождения или юбилей.</p>
                 <p>30 × 40 см</p>
-                <strong>3600 руб.</strong>
-                <button>Заказать</button>
+                <p class="popular-price">3600 руб.</p>
+                <button class="button-order">Заказать</button>
               </div>
-              <img class="svaper-image" src="img/imgbin_flower-bouquet-cut-flowers-floral-design-garden-roses-png 1.jpg"
+              <img class="svaper-image" src="img/imgbin_flower-bouquet-cut-flowers-floral-design-garden-roses-png 1.png"
                 alt="Букет из бледно-розовых роз">
             </div>
-            <div class="swiper-slide"><div class="swiper-slide-wrapper">
-              <h4>Букет «Нежность»</h4>
-              <p>Элегантный букет, который станет отличным подарком на день рождения или юбилей.</p>
-              <p>30 × 40 см</p>
-              <strong>3600 руб.</strong>
-              <button>Заказать</button>
-            </div>
-            <img class="svaper-image" src="img/imgbin_flower-bouquet-cut-flowers-floral-design-garden-roses-png 1.jpg"
-              alt="Букет из бледно-розовых роз">
-            </div>
-            ...
-          </div>
-          <div class="slider-buttons">
-            <div class="swiper-button-prev">
-              <img src="img/arrow-prew.svg" alt="Стрелка влево">
-            </div>
-            <div class="swiper-button-next">
-              <img src="img/arrow-next.svg" alt="Стрелка вправо">
-            </div>
-          </div>
-          <!-- If we need scrollbar -->
-          <div class="swiper-scrollbar"></div>
+            
+          </div> 
         </div>
-
+        <div class="slider-buttons">
+          <div class="button-prev">
+            <img src="img/arrow-prew.svg" alt="Стрелка влево">
+          </div>
+          <div class="button-next">
+            <img src="img/arrow-next.svg" alt="Стрелка вправо">
+          </div>
+        </div>
       </div>
     </section>
-    <section class="catalog-section">
+    <section id="catalog" class="section catalog-section">
       <!-- Каталог -->
       <div class="container">
         <h2 class="section-title visually-hidden ">Каталог</h2>
         <div class="catalog-list">
-          <figure class="catalog-item">
-            <img class="catalog-image" src="img/catalog-wedding.jpg" alt="букет невесты в вазе">
-            <a href="catalog-list-link">
-              <figcaption>
+          <a class="catalog-item catalog-item-wedding" href="#">
                 <h3 class="catalog-item-title">Свадебные букеты</h3>
-                <p>Букеты для невест</p>
-              </figcaption>
-            </a>
-          </figure>
-          <figure class="catalog-item">
-            <img class="catalog-image" src="img/fresh-beautiful-peony-flowers-vase 1.jpg" alt="букет с пионами в вазе">
-            <a href="catalog-list-link">
-              <figcaption>
+                <p class="catalog-item-text">Букеты для невест</p> 
+          </a>
+          <a class="catalog-item catalog-item-pions"  href="#">
                 <h3 class="catalog-item-title">Букеты с пионами</h3>
-                <p>Букеты с сезонными пионами</p>
-              </figcaption>
-            </a>
-          </figure>
-          <figure class="catalog-item">
-            <img class="catalog-image" src="img/alyssa-strohmann-tnpr-hPOta0-unsplash 1.png" alt="девушка скрыла букетом лицо">
-            <a href="catalog-list-link">
-              <figcaption>
+                <p class="catalog-item-text">Букеты с сезонными пионами</p>
+          </a>    
+          <a class="catalog-item catalog-item-choose"  href="#"> 
                 <h3 class="catalog-item-title">Выбрать букет</h3>
-                <p>Букеты в ассортименте</p>
-              </figcaption>
-            </a>
-          </figure>
+                <p class="catalog-item-text">Букеты в ассортименте</p>    
+          </a>
         </div>
       </div>
     </section>
-    <section class="promo-section">
+    <section id="promo" class="section promo-section">
       <!-- Акции -->
-      <div class="container">
+      <div class="container promo-container">
         <h2 class="visually-hidden">Акции</h2>
-        <p>Скидка 10% на первый заказ</p>
-        <p>Если заказываете у нас букет впервые — при оформлении заказа введите промокод «Botanika2021» и получите скидку 10%.</p>
+        <div class="promo-info">
+          <h3 class="promo-title">Скидка 10% <br> на первый заказ</h3>
+          <p class="promo-text">Если заказываете у нас букет впервые — при оформлении заказа введите промокод «Botanika2021» и получите скидку 10%.</p>
+        </div>
+        
       </div>
     </section>
-    <section class="order-section">
+    <section id="order" class="section order-section">
       <!-- как сделать заказ -->
       <div class="container">
-        <h2 class="section-title">4 шага к идеальному букету</h2>
+        <h2 class="section-title section-title-order">4 шага к идеальному букету</h2>
         <ul class="order-list">
-          <li class="order-item">
-            <img class="order-icon" src="img/comp.svg" alt="Компьютер-иконка">
-            <h4 class="order-title">Заказ</h4>
-            <p>Выбирите понравившейся букет из каталога и оформите заказ</p>
+          <li class="order-item order-item-1">
+            
+            <h4 class="order-title ">Заказ</h4>
+            <p class="order-text">Выбирите понравившейся букет из каталога и оформите заказ</p>
           </li>
-          <li class="order-item">
-            <img class="order-icon" src="img/women.svg" alt="Консультант-иконка">
+          <li class="order-item order-item-2">
+            
             <h4 class="order-title">Уточнение деталей</h4>
-            <p>Наш флорист позвонит вам после оформления заказа, чтобы уточнить детали</p>
+            <p class="order-text"></p>Наш флорист позвонит вам после оформления заказа, чтобы уточнить детали</p>
           </li>
-          <li class="order-item">
-            <img class="order-icon" src="img/card.svg" alt="Карта оплаты-иконка">
+          <li class="order-item order-item-3">
+            
             <h4 class="order-title">Оплата</h4>
-            <p>Оплатить заказ можно онлайн на сайте или при получении</p>
+            <p class="order-text">Оплатить заказ можно онлайн на&nbspсайте или при получении</p>
           </li>
-          <li class="order-item">
-            <img class="order-icon" src="img/shipping.svg" alt="Машинка-иконка">
+          <li class="order-item order-item-4">
+            
             <h4 class="order-title">Доставка</h4>
-            <p>Курьер позвонит за час до прибытия и доставит заказ вовремя</p>
+            <p class="order-text">Курьер позвонит за час до прибытия и доставит заказ вовремя</p>
           </li>
         </ul>
       </div>
     </section>
-    <section class="news-section">
+    <section class="section news-section">
       <!-- Новости -->
-      <div class="container">
-        <h2 class="section-title">Следите за нашими новостями</h2>
-        <p>Подписывайтесь на наши соцсети и узнавайте о новинках и акциях первым.</p>
-        <ul class="social-icons-list">
-          <li class="social-item"><a class="social-link" href="#">Инстаграмм <img src=""></a>
-          </li>
-          <li class="social-item"><a class="social-link" href="#">Фейсбук <img src=""></a>
-          </li>
-          <li class="social-item"><a class="social-link" href="#">Твиттер<img src=""></a>
-          </li>
-        </ul>
-        <img src="img/news-1.jpg">
-        <img src="img/news-2.jpg">
-        <img src="img/news-3.jpg">
+      <div class="container news-container">
+        <div class="news-info">
+          <h2 class="section-title section-title-news">Следите за нашими новостями</h2>
+          <p class="news-text">Подписывайтесь на наши соцсети и узнавайте о&nbspновинках и акциях первым.</p>
+          <ul class="social-icons-list">
+            <li class="social-item">
+              <a class="social-link" href="#">
+                <span class="social-link-text ">Инстаграмм</span>
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.84581 0C2.6218 0 0 2.60401 0 5.80437V14.1971C0 17.3974 2.6218 20 5.84581 20H14.3512C17.5752 20 20.197 17.3974 20.197 14.1971V5.80437C20.197 2.60401 17.5752 0 14.3512 0H5.84581ZM5.84581 1.71935H14.3512C16.6458 1.71935 18.4664 3.52664 18.4664 5.80437V14.1971C18.4664 16.4748 16.6458 18.2807 14.3512 18.2807H5.84581C3.55123 18.2807 1.73203 16.4748 1.73203 14.1971V5.80437C1.73203 3.52664 3.55123 1.71935 5.84581 1.71935ZM15.5189 3.43867C14.8499 3.43867 14.3078 3.97676 14.3078 4.64091C14.3078 5.30507 14.8499 5.84315 15.5189 5.84315C16.188 5.84315 16.73 5.30507 16.73 4.64091C16.73 3.97676 16.188 3.43867 15.5189 3.43867ZM10.0985 4.85061C7.24365 4.85061 4.91107 7.16609 4.91107 10C4.91107 12.8339 7.24365 15.1494 10.0985 15.1494C12.9534 15.1494 15.2874 12.8339 15.2874 10C15.2874 7.16609 12.9534 4.85061 10.0985 4.85061ZM10.0985 6.56996C12.0175 6.56996 13.5553 8.09513 13.5553 10C13.5553 11.9049 12.0175 13.43 10.0985 13.43C8.17955 13.43 6.6431 11.9049 6.6431 10C6.6431 8.09513 8.17955 6.56996 10.0985 6.56996Z"
+                    fill="#D89999" />
+                </svg>  
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link" href="#">
+                <span class="social-link-text ">Фейсбук</span>
+                <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.46041 0C5.45614 0 3.39869 1.65638 3.39869 4.69933V7.32182H0V10.8784H3.39869V20H7.46134V10.8784H10.8506L11.3596 7.32182H7.46134V5.05071C7.46134 4.02128 7.77835 3.31953 9.41206 3.31953H11.4955V0.139979C11.1352 0.0966486 9.89947 0 8.46041 0Z"
+                    fill="#D89999" />
+                </svg>
+              </a>
+            </li>
+            <li class="social-item">
+              <a class="social-link" href="#">
+                <span class="social-link-text ">Твиттер</span>
+                <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M25.7588 2.36717C24.8116 2.76883 23.7929 3.04029 22.7241 3.16259C23.8149 2.53743 24.6525 1.54801 25.0471 0.36927C24.0262 0.948099 22.8956 1.36795 21.6913 1.59426C20.7278 0.613218 19.3544 0 17.8345 0C14.9158 0 12.5503 2.26041 12.5503 5.04887C12.5503 5.44474 12.5966 5.83021 12.687 6.19951C8.29503 5.98923 4.40126 3.97853 1.79486 0.924148C1.33997 1.66952 1.07939 2.53671 1.07939 3.46218C1.07939 5.21411 2.01193 6.75926 3.43028 7.66504C2.56407 7.63916 1.74915 7.41194 1.03665 7.03349C1.03563 7.05477 1.03563 7.07575 1.03563 7.09687C1.03563 9.54362 2.8574 11.5838 5.27461 12.048C4.83157 12.1634 4.36482 12.2244 3.88283 12.2244C3.54197 12.2244 3.2115 12.1936 2.88828 12.1344C3.56119 14.1402 5.51239 15.6002 7.82521 15.641C6.01517 16.9955 3.73697 17.8022 1.26097 17.8022C0.834721 17.8022 0.413742 17.7783 0 17.7319C2.33958 19.1644 5.11689 20 8.10148 20C17.8212 20 23.1358 12.3067 23.1358 5.63404C23.1358 5.41524 23.1305 5.19793 23.1209 4.9814C24.1529 4.26896 25.0487 3.37993 25.7576 2.36721"
+                    fill="#D89999" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="news-foto">
+          <img src="img/news-1.jpg">
+          <img src="img/news-2.jpg">
+        </div>
+        <img class="news-image" src="img/news-3.jpg">
       </div>
     </section>
-    <section class="feedback-section">
+    <section  id="feedback" class="section feedback-section">
       <!-- Отзывы -->
-      <div class="container">
-        <h2 class="section-title">Отзывы</h2>
+      <div class="container feedback-container">
+        <h2 class="section-title section-title-feedback">Отзывы</h2>
         <div class="feedback-list">
           <blockquote class="feedback-item">
-            <p>Всё очень понравилось! Быстрое оформление заказа, выбор удобного времени доставки. Всем большое спасибо!</p>
-            <cite>Марина</cite>
+            <p class="feedback-item-text">Всё очень понравилось! Быстрое оформление заказа, выбор удобного времени доставки. Всем большое спасибо!</p>
+            <cite class="feedback-item-cite">Марина</cite>
           </blockquote>
           <blockquote class="feedback-item">
-            <p>Внимательные флористы, вежливые. Магазин находится прям рядом с метро. Букет очень понравился, буду ещё заказывать!</p>
-            <cite>Татьяна</cite>
+            <p class="feedback-item-text">Внимательные флористы, вежливые. Магазин находится прям рядом с метро. Букет очень понравился, буду ещё заказывать!</p>
+            <cite class="feedback-item-cite">Татьяна</cite>
           </blockquote>
           <blockquote class="feedback-item">
-            <p>Выбор букетов на любой вкус
+            <p class="feedback-item-text">Выбор букетов на любой вкус
             и цену. Бывают хорошие скидки,
             а флористы всегда помогут и точно соберут красивый букет!</p>
-            <cite>Ольга</cite>
+            <cite class="feedback-item-cite">Ольга</cite>
           </blockquote>
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section id="contacts" class="contacts-section">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651604!2d30.320894615776172!3d59.93879418187623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1630005822532!5m2!1sru!2sru"
+        width="100%" height="644" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
       <!-- Контакты -->
-      <div class="container">
-        <h2 class="section-title">Мы ждем вас</h2>
-        <p>Приходите к нам:</p>
-        <p>Санкт-Петербург,
-        ул. Большая Конюшенная, 19</p>
-        <p>Режим работы:</p>
-        <p>Пн-Вск, с 9-00 до 20-00</p>
-        <p>Позвоните нам:</p>
-        <a href="tel: +78129834719">+ 7 (812) 983-47-19</a>
-        <p>Напишите нам:</p>
-        <a href="mailto: info@botanika.ru">info@botanika.ru</a>
+      <div class="container maps-container">
+        
+        <div class="contacts">
+          
+            <h2 class="section-title section-title-contacts">Мы ждем вас</h2>
+            <p class="contacts-text">Приходите к нам:</p>
+            <p class="contacts-info">Санкт-Петербург, <br>
+              ул. Большая Конюшенная, 19</p>
+            <p class="contacts-text">Режим работы:</p>
+            <p class="contacts-info">Пн-Вск, с 9-00 до 20-00</p>
+            <p class="contacts-text">Позвоните нам:</p>
+            <a class="contacts-info" href="tel: +78129834719">+ 7 (812) 983-47-19</a>
+            <p class="contacts-text">Напишите нам:</p>
+            <a class="contacts-info" href="mailto: info@botanika.ru">info@botanika.ru</a>
+          
+        </div>
       </div>
-      <img class="map" src="img/map.jpg" alt="Карта">
+     
+      <!-- <div class="container">
+
+      </div> -->
+      
+      
+      
     </section>
   </main>
   <footer class="footer">
     <!-- Подвал -->
-    <div class="container">
-      <a href="#" class="link-item"><img class="logo" src="img/logo.svg" alt="logo - Botanica"></a>
+    <div class="container footer-container">
+      <a href="#" class="link-item"><img class="logo" src="img/logo-footer.svg" alt="logo - Botanica"></a>
       <ul class="menu-list">
-        <li class="list-item"><a href="#" class="link-item">Каталог</a></li>
-        <li class="list-item"><a href="#" class="link-item">Доставка и оплата</a></li>
-        <li class="list-item"><a href="#" class="link-item">Отзывы</a></li>
-        <li class="list-item"><a href="#" class="link-item">Спецпредложения</a>
+        <li class="list-item"><a href="catalog.html" class="link-item link-item-footer">Каталог</a></li>
+        <li class="list-item"><a href="#order" class="link-item link-item-footer">Доставка и оплата</a></li>
+        <li class="list-item"><a href="#feedback" class="link-item link-item-footer">Отзывы</a></li>
+        <li class="list-item"><a href="#promo" class="link-item link-item-footer">Спецпредложения</a>
         </li>
-        <li class="list-item"><a href="#" class="link-item">Контакты</a>
+        <li class="list-item"><a href="#contacts" class="link-item link-item-footer">Контакты</a>
         </li> 
       </ul>
       <ul class="social-icons-list">
-        <li class="social-item"><a class="social-link" href="#">Инстаграмм <img src=""></a>
+        <li class="social-item">
+          <a class="social-link" href="#">
+            <span class="social-link-text ">Инстаграмм</span>
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.84581 0C2.6218 0 0 2.60401 0 5.80437V14.1971C0 17.3974 2.6218 20 5.84581 20H14.3512C17.5752 20 20.197 17.3974 20.197 14.1971V5.80437C20.197 2.60401 17.5752 0 14.3512 0H5.84581ZM5.84581 1.71935H14.3512C16.6458 1.71935 18.4664 3.52664 18.4664 5.80437V14.1971C18.4664 16.4748 16.6458 18.2807 14.3512 18.2807H5.84581C3.55123 18.2807 1.73203 16.4748 1.73203 14.1971V5.80437C1.73203 3.52664 3.55123 1.71935 5.84581 1.71935ZM15.5189 3.43867C14.8499 3.43867 14.3078 3.97676 14.3078 4.64091C14.3078 5.30507 14.8499 5.84315 15.5189 5.84315C16.188 5.84315 16.73 5.30507 16.73 4.64091C16.73 3.97676 16.188 3.43867 15.5189 3.43867ZM10.0985 4.85061C7.24365 4.85061 4.91107 7.16609 4.91107 10C4.91107 12.8339 7.24365 15.1494 10.0985 15.1494C12.9534 15.1494 15.2874 12.8339 15.2874 10C15.2874 7.16609 12.9534 4.85061 10.0985 4.85061ZM10.0985 6.56996C12.0175 6.56996 13.5553 8.09513 13.5553 10C13.5553 11.9049 12.0175 13.43 10.0985 13.43C8.17955 13.43 6.6431 11.9049 6.6431 10C6.6431 8.09513 8.17955 6.56996 10.0985 6.56996Z"
+                fill="white" />
+            </svg>
+
+          </a>
         </li>
-        <li class="social-item"><a class="social-link" href="#">Фейсбук <img src=""></a>
+        <li class="social-item">
+          <a class="social-link" href="#">
+            <span class="social-link-text ">Фейсбук</span>
+            <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.46041 0C5.45614 0 3.39869 1.65638 3.39869 4.69933V7.32182H0V10.8784H3.39869V20H7.46134V10.8784H10.8506L11.3596 7.32182H7.46134V5.05071C7.46134 4.02128 7.77835 3.31953 9.41206 3.31953H11.4955V0.139979C11.1352 0.0966486 9.89947 0 8.46041 0Z"
+                fill="white" />
+            </svg>
+
+          </a>
         </li>
-        <li class="social-item"><a class="social-link" href="#">Твиттер<img src=""></a>
+        <li class="social-item">
+          <a class="social-link" href="#">
+            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M25.7588 2.36717C24.8116 2.76883 23.7929 3.04029 22.7241 3.16259C23.8149 2.53743 24.6525 1.54801 25.0471 0.36927C24.0262 0.948099 22.8956 1.36795 21.6913 1.59426C20.7278 0.613218 19.3544 0 17.8345 0C14.9158 0 12.5503 2.26041 12.5503 5.04887C12.5503 5.44474 12.5966 5.83021 12.687 6.19951C8.29503 5.98923 4.40126 3.97853 1.79486 0.924148C1.33997 1.66952 1.07939 2.53671 1.07939 3.46218C1.07939 5.21411 2.01193 6.75926 3.43028 7.66504C2.56407 7.63916 1.74915 7.41194 1.03665 7.03349C1.03563 7.05477 1.03563 7.07575 1.03563 7.09687C1.03563 9.54362 2.8574 11.5838 5.27461 12.048C4.83157 12.1634 4.36482 12.2244 3.88283 12.2244C3.54197 12.2244 3.2115 12.1936 2.88828 12.1344C3.56119 14.1402 5.51239 15.6002 7.82521 15.641C6.01517 16.9955 3.73697 17.8022 1.26097 17.8022C0.834721 17.8022 0.413742 17.7783 0 17.7319C2.33958 19.1644 5.11689 20 8.10148 20C17.8212 20 23.1358 12.3067 23.1358 5.63404C23.1358 5.41524 23.1305 5.19793 23.1209 4.9814C24.1529 4.26896 25.0487 3.37993 25.7576 2.36721"
+                fill="white" />
+            </svg>
+
+          </a>
         </li>
       </ul>
     </div>
   </footer>
+<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
